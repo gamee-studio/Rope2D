@@ -2,8 +2,7 @@
     "name": "gamee@Rope2D",
     "rootNamespace": "",
     "references": [
-        "GUID:5d300491f97ee2243b930a5bcaf255a1",
-        "GUID:2847ab5af5b9d4841b25c06928b31290"
+        "GUID:5d300491f97ee2243b930a5bcaf255a1"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
