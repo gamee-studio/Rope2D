@@ -1,4 +1,6 @@
-﻿    using System.Collections.Generic;
+﻿namespace pancake.Rope2DEditor
+{
+    using System.Collections.Generic;
 #if UNITY_EDITOR
     using UnityEditor;
 #endif
@@ -81,3 +83,4 @@
 
 #endif
     }
+}

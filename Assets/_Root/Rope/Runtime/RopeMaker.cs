@@ -7,6 +7,7 @@ namespace Rope2d
     using System.Linq;
 #if UNITY_EDITOR
     using UnityEditor;
+    using pancake.Rope2DEditor;
 
 #endif
 
@@ -21,7 +22,7 @@ namespace Rope2d
         [Header("Midpoints")] public List<Vector3> midPoints = new List<Vector3>();
         [Range(0, 1)] public float smoothness = 0;
 
-        [Header("Props")] [Min(0.001f)] public float scale = 1f;
+        [Header("Props")][Min(0.001f)] public float scale = 1f;
         [Min(-1)] public float spacing = 0;
         public Vector2 jointAngleLimits = new Vector2(-10, 10);
         public List<RopeNode> ropeNodePrefabs;

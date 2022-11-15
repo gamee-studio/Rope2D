@@ -1,6 +1,9 @@
-﻿using UnityEngine;
+﻿namespace pancake.Rope2DEditor
+{
 
-public static class ColorUtils
+    using UnityEngine;
+
+    public static class ColorUtils
     {
         public static readonly Color pink = new Color32(255, 105, 180, 255);
         public static readonly Color orange = new Color32(255, 162, 0, 255);
@@ -66,3 +69,4 @@ public static class ColorUtils
         }
 
     }
+}
