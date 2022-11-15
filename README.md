@@ -7,7 +7,8 @@
 
 Add the lines below to `Packages/manifest.json`
 
-for version x.x.x
+for version 1.0.0
 ```csharp
-"com.pancake.__package_name__": "https://github.com/pancake-llc/packagename.git#x.x.x",
+    "com.pancake.heart": "https://github.com/pancake-llc/heart.git#1.0.1",
+    "com.gamee.rope2d": "https://github.com/gamee-studio/Rope2D.git?path=Assets/_Root",
 ```
