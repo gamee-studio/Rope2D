@@ -4,9 +4,9 @@
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
-    using pancake.Rope2DEditor;
 #if UNITY_EDITOR
     using UnityEditor;
+    using pancake.Rope2DEditor;
 
 #endif
 
