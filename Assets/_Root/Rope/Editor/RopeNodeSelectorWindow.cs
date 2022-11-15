@@ -1,4 +1,4 @@
-﻿namespace Rope2d
+﻿namespace pancake.Rope2DEditor
 {
 #if UNITY_EDITOR
     using UnityEngine;
@@ -6,7 +6,8 @@
     using UnityEditor;
     using System.Collections.Generic;
     using System.Linq;
-    using pancake.Rope2DEditor;
+    using pancake.Rope2DExtension;
+    using Rope2d;
 
     public class RopeNodeSelectorWindow : EditorWindow
     {

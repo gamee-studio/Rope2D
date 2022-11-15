@@ -1,13 +1,14 @@
-﻿using System;
-
-namespace Rope2d
+﻿
+namespace pancake.Rope2DEditor
 {
+    using System;
     using UnityEngine;
     using System.Collections.Generic;
     using System.Linq;
+    using pancake.Rope2DExtension;
 #if UNITY_EDITOR
     using UnityEditor;
-    using pancake.Rope2DEditor;
+    using Rope2d;
 
 #endif
 
@@ -206,14 +207,6 @@ namespace Rope2d
             }
 
             return points;
-        }
-
-
-        public enum FixEndType
-        {
-            Free,
-            Fixed,
-            Pivotable
         }
     }
 
@@ -439,7 +432,7 @@ namespace Rope2d
 
                 var hsize = HandleUtility.GetHandleSize(ropeMaker.transform.position) * 0.5f;
 
-                void doDrawEnd(string name, Vector3 endPos, RopeMaker.FixEndType fixType, Action<RopeMaker.FixEndType> setTypeCallback)
+                void doDrawEnd(string name, Vector3 endPos, FixEndType fixType, Action<FixEndType> setTypeCallback)
                 {
                     var wp = ropeMaker.transform.TransformPoint(endPos);
                     var guiPos = HandleUtility.WorldToGUIPoint(wp);
@@ -451,7 +444,7 @@ namespace Rope2d
                     if (GUI.Button(btnRect, btnText))
                     {
                         var menu = new GenericMenu();
-                        var vals = (RopeMaker.FixEndType[])Enum.GetValues(typeof(RopeMaker.FixEndType));
+                        var vals = (FixEndType[])Enum.GetValues(typeof(FixEndType));
                         foreach (var val in vals)
                         {
                             menu.AddItem(new GUIContent(val.ToString()),

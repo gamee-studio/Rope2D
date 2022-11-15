@@ -3,12 +3,9 @@
     using System;
     using System.Collections;
     using System.Linq;
-
     using UnityEngine;
     using Object = UnityEngine.Object;
-#if UNITY_EDITOR
-    using pancake.Rope2DEditor;
-#endif
+    using pancake.Rope2DExtension;
 
 
     public partial class PreviewGenerator

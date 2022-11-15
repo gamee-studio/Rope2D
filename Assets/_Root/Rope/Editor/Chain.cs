@@ -1,13 +1,13 @@
-﻿namespace Rope2d
+﻿namespace pancake.Rope2DEditor
 {
     using UnityEngine;
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
+    using pancake.Rope2DExtension;
 #if UNITY_EDITOR
     using UnityEditor;
-    using pancake.Rope2DEditor;
-
+    using Rope2d;
 #endif
 
     public class Chain : MonoBehaviour

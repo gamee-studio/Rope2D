@@ -3,6 +3,7 @@
 #if UNITY_EDITOR
     using UnityEditor;
     using UnityEngine;
+    using pancake.Rope2DExtension;
     public static class SceneViewUtils
     {
         /// <summary>

@@ -1,4 +1,4 @@
-﻿namespace pancake.Rope2DEditor
+﻿namespace pancake.Rope2DExtension
 {
     using System;
     using System.Collections.Generic;

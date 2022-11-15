@@ -36,19 +36,19 @@
 
 
 
-        public RopeMaker.FixEndType GetFixedType()
+        public FixEndType GetFixedType()
         {
             var joints = GetComponents<AnchoredJoint2D>();
             foreach (var j in joints)
             {
                 if (j.enabled && !j.connectedBody)
                 {
-                    if (j is FixedJoint2D) return RopeMaker.FixEndType.Fixed;
-                    else if (j is HingeJoint2D) return RopeMaker.FixEndType.Pivotable;
+                    if (j is FixedJoint2D) return FixEndType.Fixed;
+                    else if (j is HingeJoint2D) return FixEndType.Pivotable;
                 }
             }
 
-            return RopeMaker.FixEndType.Free;
+            return FixEndType.Free;
         }
 
 

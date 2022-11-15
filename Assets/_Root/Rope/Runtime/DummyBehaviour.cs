@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-#if UNITY_EDITOR
-using pancake.Rope2DEditor;
-#endif
+using pancake.Rope2DExtension;
 
 
 class DummyBehaviour : MonoBehaviour

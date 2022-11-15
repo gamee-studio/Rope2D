@@ -164,8 +164,8 @@
                 pair.Item1.constraints = RigidbodyConstraints2D.None;
             }
 
-            bool fadeThis = nodes[0].GetFixedType() != RopeMaker.FixEndType.Free;
-            bool fadeThat = isFadingOut || nodes[nodes.Count - 1].GetFixedType() != RopeMaker.FixEndType.Free;
+            bool fadeThis = nodes[0].GetFixedType() != FixEndType.Free;
+            bool fadeThat = isFadingOut || nodes[nodes.Count - 1].GetFixedType() != FixEndType.Free;
 
             TrimRope(lastIndexToKeep, true);
             newRope.TrimRope(lastIndexToKeep, false);
