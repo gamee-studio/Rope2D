@@ -4,6 +4,8 @@
     using System.Collections.Generic;
     using System.Linq;
     using DG.Tweening;
+    using DG.Tweening.Core;
+    using DG.Tweening.Plugins.Options;
 
     public class Rope : MonoBehaviour
     {
@@ -254,12 +256,22 @@
                 for (int i = 0; i < nodes.Count; i++)
                 {
                     var n = nodes[i];
-                    if (i == 0) seq.Append(n.rend.DOFade(0, duration));
-                    else seq.Join(n.rend.DOFade(0, duration));
+                    if (i == 0) seq.Append(DOFade(n.rend, 0, duration));
+                    else seq.Join(DOFade(n.rend, 0, duration));
                 }
 
                 seq.AppendCallback(() => { Destroy(gameObject); });
             }
+        }
+
+        /// <summary>Tweens a Material's alpha color to the given value.
+        /// Also stores the spriteRenderer as the tween's target so it can be used for filtered operations</summary>
+        /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
+        private TweenerCore<Color, Color, ColorOptions> DOFade(SpriteRenderer target, float endValue, float duration)
+        {
+            TweenerCore<Color, Color, ColorOptions> t = DOTween.ToAlpha(() => target.color, x => target.color = x, endValue, duration);
+            t.SetTarget(target);
+            return t;
         }
     }
 }
