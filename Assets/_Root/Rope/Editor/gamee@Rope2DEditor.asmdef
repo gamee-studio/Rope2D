@@ -6,7 +6,9 @@
         "GUID:aa7bfce6e62f94e4baf3d103d153ca26"
     ],
     "includePlatforms": [
-        "Editor"
+        "Editor",
+        "WindowsStandalone32",
+        "WindowsStandalone64"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
